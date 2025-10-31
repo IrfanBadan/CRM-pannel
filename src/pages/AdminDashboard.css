@@ -1,0 +1,164 @@
+.admin-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header-bar {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(26, 60, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(26, 60, 255, 0.1);
+}
+
+.header-bar h3 {
+  color: var(--lux-accent-dark);
+  font-weight: 600;
+  margin: 0;
+}
+
+.glass-btn {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(26, 60, 255, 0.25);
+  color: var(--lux-accent-dark);
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-btn:hover {
+  background: var(--lux-accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.glass-btn.danger {
+  border-color: rgba(255, 0, 0, 0.3);
+  color: #b10000;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(26, 60, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(26, 60, 255, 0.08);
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(26, 60, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 10px;
+  outline: none;
+  color: #333;
+  transition: border 0.3s ease;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: var(--lux-accent);
+  box-shadow: 0 0 5px rgba(26, 60, 255, 0.25);
+}
+
+.filters label {
+  font-weight: 500;
+  color: var(--lux-accent-dark);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(26, 60, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(26, 60, 255, 0.08);
+  margin-bottom: 25px;
+}
+
+.glass-card h5 {
+  color: var(--lux-accent-dark);
+  font-weight: 600;
+}
+
+.glass-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.glass-table th {
+  background: var(--lux-accent);
+  color: white;
+  font-weight: 500;
+  padding: 12px;
+}
+
+.glass-table td {
+  background: #fff;
+  color: #222;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.glass-table tr:nth-child(even) td {
+  background: #f7f9ff;
+}
+
+.glass-table tr:hover td {
+  background: #eaf0ff;
+}
+
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.present {
+  background: rgba(0, 180, 0, 0.15);
+  color: #008000;
+}
+
+.absent {
+  background: rgba(255, 0, 0, 0.15);
+  color: #b10000;
+}
+
+.toast-glass {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(26, 60, 255, 0.7);
+  color: white;
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+  box-shadow: 0 0 15px rgba(26, 60, 255, 0.3);
+  z-index: 1000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

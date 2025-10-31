@@ -1,0 +1,143 @@
+:root {
+  --lux-bg: linear-gradient(135deg, #ffffff 0%, #e8f0ff 100%);
+  --lux-accent: #1a3cff;
+  --lux-accent-dark: #0f2bb8;
+  --text-dark: #1c1c1c;
+  --text-muted: #666;
+  --white-translucent: rgba(255, 255, 255, 0.8);
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-hover: rgba(26, 60, 255, 0.15);
+}
+
+/* ---------- GLOBAL ---------- */
+body {
+  background: radial-gradient(circle at 10% 10%, #ffffff 0%, #f0f4ff 50%, #dbe3ff 100%);
+  color: var(--text-dark);
+  font-family: 'Poppins', sans-serif;
+}
+
+.app-bg {
+  background: linear-gradient(180deg, var(--white-translucent), rgba(240, 244, 255, 0.9));
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar,
+.nav-glass {
+  background: var(--white-translucent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  color: var(--lux-accent) !important;
+}
+
+.nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--lux-accent-dark) !important;
+}
+
+/* ---------- CARDS ---------- */
+.luxury-card {
+  background: linear-gradient(180deg, #ffffff, #f4f7ff);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px var(--shadow-light);
+  color: #111;
+  transition: all 0.3s ease-in-out;
+}
+
+.luxury-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px var(--shadow-hover);
+}
+
+.card .card-title {
+  color: var(--lux-accent-dark);
+}
+
+.lead.text-muted {
+  color: var(--text-muted);
+}
+
+/* ---------- BUTTONS ---------- */
+.btn-outline-light {
+  border-color: var(--lux-accent);
+  color: var(--lux-accent);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: var(--lux-accent);
+  color: #fff;
+}
+
+/* ---------- TABLE ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px var(--shadow-light);
+  text-align: center;
+}
+
+thead {
+  background-color: var(--lux-accent);
+  color: #fff;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 12px 16px;
+  color: #000;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tbody tr:hover {
+  background-color: #e8f0ff;
+}
+
+/* ---------- TABLE DARK VARIANT ---------- */
+.table-dark thead th {
+  background: var(--lux-accent);
+  color: #fff;
+  border: none;
+}
+
+.table-dark tbody td,
+.table-dark tbody th {
+  background: #fff;
+  color: #333;
+}
+
+/* ---------- ANIMATIONS ---------- */
+.attendance-badge {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.attendance-badge.animate {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .display-5 {
+    font-size: 1.6rem;
+  }
+}
